@@ -1,380 +1,527 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lighter Premium - Elektronik Gaya Hidup</title>
-<!-- Google Fonts for a premium look -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
-<style>
-  /* Reset & Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #121212;
-  color: #fff;
-  line-height: 1.6;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam Tangan Korek Elektrik - Elegan & Fungsional</title>
+    <meta name="description" content="Kombinasi sempurna jam tangan mewah dan korek api elektrik modern. Tampil beda, praktis, dan penuh gaya. Pesan sekarang dengan promo terbatas!">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+    <style>
+        /* CSS Reset and Basic Setup */
+        :root {
+            --primary-color: #FFA500; /* Fiery Orange/Gold */
+            --dark-bg: #121212;
+            --card-bg: #1E1E1E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --font-display: 'Poppins', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Header / Hero */
-.header {
-  padding: 2rem 0;
-  position: relative;
-  overflow: hidden;
-}
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #ffd700;
-  letter-spacing: 1px;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
-}
-.hero-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.hero-images img {
-  width: 100%;
-  max-width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
-.hero-images img:hover {
-  transform: scale(1.05);
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Benefits Section */
-.benefits {
-  background: #1e1e1e;
-  padding: 3rem 1rem;
-}
-.benefits h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #ffd700;
-}
-.benefit-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-.benefit {
-  background: #2a2a2a;
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: background 0.3s, transform 0.3s;
-}
-.benefit:hover {
-  background: #3a3a3a;
-  transform: translateY(-5px);
-}
-.benefit h3 {
-  margin-bottom: 1rem;
-  color: #ffd700;
-}
-.benefit p {
-  font-size: 1rem;
-}
+        body {
+            font-family: var(--font-body);
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 90px; /* Space for sticky banner on mobile */
+        }
 
-/* Testimonials */
-.testimonials {
-  padding: 3rem 1rem;
-}
-.testimonials h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #ffd700;
-}
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-.testimonial {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 10px;
-  font-style: italic;
-  position: relative;
-}
-.testimonial::before {
-  content: "“";
-  font-size: 2rem;
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  color: #ffd700;
-}
-.testimonial p {
-  margin-bottom: 1rem;
-}
-.testimonial .name {
-  font-weight: bold;
-  margin-top: 0.5rem;
-  text-align: right;
-}
+        /* Utility Classes */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-/* Urgency & Countdown */
-.countdown-section {
-  background: #121212;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-.countdown h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ffd700;
-}
-.timer {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-.urgent-message {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #ff4d4d;
-}
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--dark-bg);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
 
-/* Sticky Price Banner */
-.price-banner {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #222;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
-  z-index: 999;
-  flex-wrap: wrap;
-}
-.price-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-.price-info span {
-  display: block;
-  font-size: 1.2rem;
-  margin: 0.2rem 0;
-}
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffd700;
-}
-.price-crossed {
-  text-decoration: line-through;
-  margin-left: 10px;
-  font-size: 1rem;
-  color: #888;
-}
-.cta-button {
-  background: #ffd700;
-  color: #000;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.cta-button:hover {
-  background: #e6c200;
-}
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 165, 0, 0.2);
+        }
+        
+        /* Animation on Scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
 
-/* Responsive styles */
-@media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .hero p {
-    font-size: 1.3rem;
-  }
-  .hero-images {
-    max-width: 60%;
-  }
-  .benefit-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-</style>
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* Header / Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 1)), url('https://ae01.alicdn.com/kf/S728a19b2e71940d8bad1704c24e26844T.jpg?width=790&height=588&hash=1378');
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero img.product-showcase {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 165, 0, 0.1);
+        }
+
+        .benefit-card .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Features/Gallery Section */
+        .features {
+            background-color: var(--card-bg);
+        }
+        .feature-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .feature-text {
+            text-align: center;
+        }
+        .feature-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        .testimonial-card .author {
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        /* Urgency/CTA Section */
+        .urgency {
+            background-color: var(--card-bg);
+            text-align: center;
+        }
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .timer-box {
+            background-color: var(--dark-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            min-width: 80px;
+        }
+        .timer-box .time {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .timer-box .label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        
+        .stock-counter {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .stock-counter span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid var(--card-bg);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Sticky Bottom Banner */
+        .sticky-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--primary-color);
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .price-info .normal-price {
+            text-decoration: line-through;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .price-info .selling-price {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .sticky-banner .cta-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0; /* No need for padding on desktop */
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero .tagline {
+                font-size: 1.5rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-content {
+                flex-direction: row;
+                gap: 3rem;
+                text-align: left;
+            }
+            .feature-text, .feature-image {
+                flex: 1;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .sticky-banner {
+                display: none; /* Hide sticky banner on desktop */
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-<!-- Header / Hero -->
-<section class="header" id="top">
-  <div class="container hero">
-    <div>
-      <h1>Wajah Elegan, Gaya Lux</h1>
-      <p>Watches unique design, this is a magical watch, a perfect combination of watch and electric lighter. Eksklusif untuk pria Indonesia yang berkelas.</p>
-      <a href="#order" class="cta-button">Pesan Sekarang</a>
+    <header class="hero">
+        <div class="container">
+            <h1 class="animate-on-scroll">Kombinasi Sempurna Gaya & Fungsi</h1>
+            <p class="tagline animate-on-scroll">"Desain jam tangan yang unik, ini adalah jam tangan ajaib, perpaduan sempurna antara jam tangan dan korek api elektrik."</p>
+            <img src="https://ae01.alicdn.com/kf/S927fd144cdc84516801e94ad61b9e11fB.jpg?width=790&height=934&hash=1724" alt="Jam Tangan Korek Elektrik" class="product-showcase animate-on-scroll">
+            <a href="https://emma.orderonline.id/lighter-jam" target="_self" class="cta-button animate-on-scroll">Pesan Sekarang & Tampil Beda</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="benefits">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Lebih dari Sekedar Penunjuk Waktu</h2>
+                <p class="section-subtitle animate-on-scroll">Inilah mengapa Jam Tangan Korek Elektrik menjadi pilihan pria modern Indonesia yang menghargai kualitas, gaya, dan kepraktisan.</p>
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">⌚</div>
+                        <h3>Desain Mewah & Maskulin</h3>
+                        <p>Dibuat dengan detail presisi, jam tangan ini memberikan kesan mewah dan meningkatkan penampilan Anda di setiap kesempatan.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">⚡</div>
+                        <h3>Praktis 2-in-1</h3>
+                        <p>Lupakan membawa korek api terpisah. Dengan satu perangkat elegan, Anda memiliki jam tangan dan korek api elektrik yang selalu siap digunakan.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">🔋</div>
+                        <h3>Isi Ulang USB, Tanpa Gas</h3>
+                        <p>Lebih ramah lingkungan dan ekonomis. Cukup hubungkan ke port USB untuk mengisi daya, tidak perlu lagi membeli gas atau korek api baru.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">💨</div>
+                        <h3>Tahan Angin & Aman</h3>
+                        <p>Korek api elektrik ini dapat menyala dalam kondisi berangin sekalipun, memberikan keandalan yang tidak dimiliki korek api biasa.</p>
+                    </div>
+                </div>
+            </div>
+        section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-image animate-on-scroll">
+                        <img src="https://ae01.alicdn.com/kf/Sb56a74ba9dba4a039066bc7f4dc5d243L.jpg?width=790&height=1370&hash=2160" alt="Detail Jam Tangan Korek">
+                    </div>
+                    <div class="feature-text animate-on-scroll">
+                        <h2 class="section-title" style="text-align: left;">Inovasi di Pergelangan Tangan Anda</h2>
+                        <p>Geser penutupnya untuk mengaktifkan elemen pemanas. Desain cerdas ini memastikan keamanan dan kemudahan penggunaan. Jam tangan tetap berfungsi normal, sementara fitur korek api tersembunyi dengan elegan. Ini adalah simbol status dan kecerdasan modern.</p>
+                        <br>
+                        <a href="https://emma.orderonline.id/lighter-jam" target="_self" class="cta-button">Dapatkan Milik Anda Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Apa Kata Pelanggan Kami</h2>
+                <p class="section-subtitle animate-on-scroll">Kepuasan mereka adalah bukti kualitas produk kami.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Keren banget, teman-teman kantor langsung pada nanya beli di mana. Kelihatan jauh lebih mahal dari harganya."</p>
+                        <div class="author">- Budi H., Jakarta</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Sangat praktis, nggak perlu lagi bawa korek terpisah. Desainnya juga jantan banget, saya suka."</p>
+                        <div class="author">- Agus S., Surabaya</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Saya beli untuk hadiah suami, dia suka sekali! Katanya ini hadiah paling unik yang pernah dia terima. Recommended!"</p>
+                        <div class="author">- Rina W., Bandung</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Fitur koreknya tahan angin, sering saya pakai pas lagi di luar. Cas-nya juga cepat. Produk berkualitas."</p>
+                        <div class="author">- Iwan P., Medan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="urgency">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Jangan Sampai Kehabisan!</h2>
+                <p class="section-subtitle animate-on-scroll">Promo peluncuran ini tidak akan berlangsung selamanya. Dapatkan harga spesial hanya untuk hari ini!</p>
+                
+                <div class="countdown-timer animate-on-scroll">
+                    <div class="timer-box"><div id="hours" class="time">23</div><div class="label">Jam</div></div>
+                    <div class="timer-box"><div id="minutes" class="time">59</div><div class="label">Menit</div></div>
+                    <div class="timer-box"><div id="seconds" class="time">59</div><div class="label">Detik</div></div>
+                </div>
+
+                <div class="price-display animate-on-scroll" style="margin: 2rem 0;">
+                    <p style="color: var(--text-secondary);">Harga Normal: <span style="text-decoration: line-through;">Rp 298.500</span></p>
+                    <p style="font-size: 1.2rem;">Harga Promo Hari Ini:</p>
+                    <h3 style="font-family: var(--font-display); font-size: 2.5rem; color: var(--primary-color); margin-top: 0.5rem;">Rp 199.000</h3>
+                </div>
+
+                <a href="https://emma.orderonline.id/lighter-jam" target="_self" class="cta-button animate-on-scroll">YA, SAYA MAU PROMONYA!</a>
+                
+                <p class="stock-counter animate-on-scroll">
+                    🔥 Stok semakin menipis! Hanya tersisa <span id="stock-count">23</span> unit untuk promo ini.
+                </p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jam Tangan Korek Indonesia. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <div class="sticky-banner">
+        <div class="price-info">
+            <div class="normal-price">Rp 298.500</div>
+            <div class="selling-price">Rp 199.000</div>
+        </div>
+        <a href="https://emma.orderonline.id/lighter-jam" target="_self" class="cta-button">Pesan Sekarang</a>
     </div>
-    <div class="hero-images">
-      <img src="https://ae01.alicdn.com/kf/S728a19b2e71940d8bad1704c24e26844T.jpg?width=790&height=588&hash=1378" alt="Lighter 1" />
-      <img src="https://ae01.alicdn.com/kf/S927fd144cdc84516801e94ad61b9e11fB.jpg?width=790&height=934&hash=1724" alt="Lighter 2" />
-      <img src="https://ae01.alicdn.com/kf/Sb56a74ba9dba4a039066bc7f4dc5d243L.jpg?width=790&height=1370&hash=2160" alt="Lighter 3" />
-      <img src="https://ae01.alicdn.com/kf/S9efd34266c48414e8c528106e65d8d81d.jpg?width=790&height=1424&hash=2214" alt="Lighter 4" />
-    </div>
-  </div>
-</section>
 
-<!-- Benefits Section -->
-<section class="benefits" id="benefits">
-  <div class="container">
-    <h2 style="text-align:center;">Keunggulan Produk</h2>
-    <div class="benefit-list">
-      <div class="benefit">
-        <h3>Desain Eksklusif & Lux</h3>
-        <p>Gaya keren dan elegan cocok untuk pria berkelas di Indonesia.</p>
-      </div>
-      <div class="benefit">
-        <h3>Ganda Fungsi</h3>
-        <p>Kombinasi jam dan korek api listrik yang praktis dan bergaya.</p>
-      </div>
-      <div class="benefit">
-        <h3>Premium Material</h3>
-        <p>Bahan berkualitas tinggi untuk daya tahan dan penampilan mewah.</p>
-      </div>
-      <div class="benefit">
-        <h3>Mudah Dibawa</h3>
-        <p>Compact dan stylish, cocok untuk gaya hidup aktif dan modern.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- ANIMATION ON SCROLL ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
 
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <h2 style="text-align:center;">Kata Mereka</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p>"Produk ini sangat keren, cocok untuk gaya saya. Kualitas premium dan desain elegan."</p>
-        <div class="name">Andi, Jakarta</div>
-      </div>
-      <div class="testimonial">
-        <p>"Saya suka kombinasi jam dan korek api ini. Praktis dan terlihat mahal."</p>
-        <div class="name">Budi, Surabaya</div>
-      </div>
-      <div class="testimonial">
-        <p>"Memberikan sentuhan luks di penampilan saya. Sangat puas!"</p>
-        <div class="name">Rian, Bandung</div>
-      </div>
-      <div class="testimonial">
-        <p>"Membantu saya tampil beda dan percaya diri setiap hari."</p>
-        <div class="name">Dewi, Jakarta</div>
-      </div>
-    </div>
-  </div>
-</section>
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+        elementsToAnimate.forEach(el => observer.observe(el));
 
-<!-- Countdown & Urgency -->
-<section class="countdown-section" id="countdown">
-  <div class="container">
-    <h2 style="margin-bottom:1rem;">Penawaran Terbatas!</h2>
-    <div class="timer" id="timer">Loading...</div>
-    <div class="urgent-message" id="urgentMsg">Diskon ini hanya berlaku 3 hari lagi!</div>
-  </div>
-</section>
 
-<!-- Order & Call-to-Action -->
-<section id="order" style="padding:3rem 1rem; background:#222;">
-  <div class="container" style="text-align:center;">
-    <h2 style="margin-bottom:1.5rem;">Dapatkan Sekarang</h2>
-    <a href="https://emma.orderonline.id/lighter-jam" target="_blank" class="cta-button" style="font-size:1.5rem;">Order Sekarang</a>
-  </div>
-</section>
+        // --- COUNTDOWN TIMER ---
+        function startCountdown() {
+            const countdownElements = {
+                hours: document.getElementById('hours'),
+                minutes: document.getElementById('minutes'),
+                seconds: document.getElementById('seconds')
+            };
 
-<!-- Sticky Price Banner -->
-<div class="price-banner" id="priceBanner">
-  <div class="price-info">
-    <div style="display:flex; align-items:center;">
-      <span style="text-decoration: line-through;">Rp 298.500</span>
-      <span style="margin-left:10px; font-size:1.2rem; font-weight:700; color:#ffd700;">Rp 199.000</span>
-    </div>
-    <small style="color:#aaa;">Harga Modal: Rp 59.000</small>
-  </div>
-  <button class="cta-button" onclick="scrollToOrder()">Pesan Sekarang</button>
-</div>
+            // Set timer for end of the day
+            let now = new Date();
+            let endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+            
+            let timeLeft = endOfDay.getTime() - now.getTime();
 
-<!-- Scripts -->
-<script>
-// Countdown Timer (e.g., 3 days from now)
-const countdownEnd = new Date().getTime() + 3 * 24 * 60 * 60 * 1000; // 3 days
-const timerElem = document.getElementById('timer');
+            const interval = setInterval(() => {
+                timeLeft -= 1000;
+                
+                if (timeLeft < 0) {
+                    clearInterval(interval);
+                    // Optional: handle what happens when timer ends
+                    countdownElements.hours.textContent = '00';
+                    countdownElements.minutes.textContent = '00';
+                    countdownElements.seconds.textContent = '00';
+                    return;
+                }
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = countdownEnd - now;
+                let hours = Math.floor((timeLeft / (1000 * 60 * 60)));
+                let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-  if (distance < 0) {
-    timerElem.innerHTML = "Penawaran Berakhir!";
-    document.getElementById('urgentMsg').innerText = "Diskon ini telah berakhir.";
-    clearInterval(countdownInterval);
-    return;
-  }
+                countdownElements.hours.textContent = hours.toString().padStart(2, '0');
+                countdownElements.minutes.textContent = minutes.toString().padStart(2, '0');
+                countdownElements.seconds.textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+        
+        startCountdown();
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 *60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 *60));
-  const seconds = Math.floor((distance % (1000 *60)) / 1000);
 
-  timerElem.innerHTML = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
-}
+        // --- DYNAMIC STOCK COUNTER ---
+        function dynamicStockCounter() {
+            const stockElement = document.getElementById('stock-count');
+            if (!stockElement) return;
 
-const countdownInterval = setInterval(updateCountdown, 1000);
-updateCountdown();
+            let stockCount = parseInt(stockElement.textContent);
 
-// Scroll to order section
-function scrollToOrder() {
-  document.getElementById('order').scrollIntoView({behavior: 'smooth'});
-}
-</script>
+            // Decrease stock randomly to create urgency
+            setInterval(() => {
+                const randomDecrement = Math.floor(Math.random() * 3); // 0, 1, or 2
+                if (stockCount > 5 && randomDecrement > 0) { // Don't let it go too low too fast
+                    stockCount--;
+                    stockElement.textContent = stockCount;
+                }
+            }, 30000); // every 30 seconds
+        }
+
+        dynamicStockCounter();
+
+    });
+    </script>
+
 </body>
 </html>
